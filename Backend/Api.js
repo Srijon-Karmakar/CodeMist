@@ -1,14 +1,17 @@
 const express = require("express");
+const path = require('path');
 const app = express();
 const bodyP = require("body-parser");
 const compiler = require("compilex"); 
 const options = { stats: true };
 compiler.init(options);
+app.use(express.static(path.join(__dirname, '../Frontend')));
 app.use(bodyP.json());
-app.use(express.static("C:/Users/srijo/OneDrive/Documents/_PROJECTS_/_CODEMIST_/Frontend"));
+// app.use(express.static("C:/Users/srijo/OneDrive/Documents/_PROJECTS_/_CODEMIST_/Frontend"));
 app.get("/", (req, res) =>{
     compiler.flush(() => {});
-    res.sendFile("C:/Users/srijo/OneDrive/Documents/_PROJECTS_/_CODEMIST_/Frontend/home-page.html");
+    // res.sendFile("C:/Users/srijo/OneDrive/Documents/_PROJECTS_/_CODEMIST_/Frontend/home-page.html");
+    res.sendFile(path.join(__dirname, '../Frontend/home-page.html'));
 });
 
 app.post("/compile", (req, res) => {
