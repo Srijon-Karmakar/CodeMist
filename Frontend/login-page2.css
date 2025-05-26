@@ -1,0 +1,149 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #f4e795, #cfc5aa);
+    background-image: url('CodemistBg.jpg');
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Circles */
+.background-circles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #bf4616, #5b2000);
+    animation: float 7s infinite ease-in-out;
+    
+}
+
+.circle1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.circle2 {
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+/* Ball Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-30px) translateX(20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Login Form Container */
+.login-container {
+    width: 90%;
+    max-width: 350px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.33);
+    backdrop-filter: blur(30px);
+    border-radius: 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* Tab Container */
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background: #e0e0e000;
+    /* border-radius: 10px 10px 0 0; */
+    border-radius: 25px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.tab.active {
+    background: #a85817;
+    color: white;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 90%;
+    padding: 10px 17px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background: #a85817;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-button:hover {
+    background: #318c1d;
+}
+
+#go-to-home{
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    border-radius: 50px;
+    height: 40px; width: 40px;
+    position: absolute;top: 105%;left: 48%;
+    cursor: pointer;
+}
+#home-icon{
+    /* filter: grayscale(30%); */
+    z-index: 100;
+    width: 22px; height: auto;
+
+}

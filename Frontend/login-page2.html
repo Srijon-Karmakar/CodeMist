@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login-page2.css">
+</head>
+<body>
+    <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+    <main class="login-container">
+        <div class="tab-container">
+            <div class="tab active" id="login-tab" role="tab" aria-selected="true">Login</div>
+            <div class="tab" id="signup-tab" role="tab" aria-selected="false">Signup</div>
+        </div>
+        <form id="login-form" aria-labelledby="login-tab">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+        <div>
+            <button id="go-to-home">
+                <img  id="home-icon"   src="home-icon.png" alt="home">
+            </button>
+        </div>
+    </main>
+    <script src="login-page2.js"></script>
+</body>
+</html>
